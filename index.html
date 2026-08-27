@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Braxton Chandler</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --border: #e4e4e7;
+      --accent: #2e9e5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+    header {
+      margin-bottom: 48px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 6px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    .product {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+    .product h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+    .product p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #3f3f3f;
+    }
+    .product .meta {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .product .meta a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .product .meta a:hover {
+      text-decoration: underline;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background-color: #f4f4f5;
+      color: #52525b;
+      margin-left: 8px;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Braxton Chandler</h1>
+      <p class="subtitle">Independent software developer — mobile games and browser tools.</p>
+    </header>
+
+    <section>
+      <h2>Products</h2>
+
+      <div class="product">
+        <h3>FlipTools<span class="tag">Chrome Extension</span></h3>
+        <p>A resale arbitrage tool for eBay flippers — detects listings, checks local resale prices on Facebook Marketplace and OfferUp, and calculates profit margin instantly. Free plan available; Pro is $15/month.</p>
+        <div class="meta"><a href="https://github.com/Bchandlerrr/FlipTools">View on GitHub →</a></div>
+      </div>
+
+      <div class="product">
+        <h3>Orbit Pull<span class="tag">iOS Game</span></h3>
+        <p>A physics-based slingshot arcade game with Ranked and Casual modes.</p>
+        <div class="meta">App Store listing coming soon.</div>
+      </div>
+
+      <div class="product">
+        <h3>Space Miner<span class="tag">iOS Game</span></h3>
+        <p>An idle space-mining game with an upgrade economy and procedural visuals.</p>
+        <div class="meta">App Store listing coming soon.</div>
+      </div>
+    </section>
+
+    <footer>
+      Contact: <a href="mailto:brax6@icloud.com">brax6@icloud.com</a>
+    </footer>
+  </main>
+</body>
+</html>
