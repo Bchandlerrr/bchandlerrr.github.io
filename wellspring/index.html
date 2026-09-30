@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wellspring: Idle River</title>
+  <meta name="description" content="Wellspring is an idle game where you grow a single spring into a mighty river. Dig channels, build works where they reach the most water, and let your river reach the sea.">
+  <meta property="og:title" content="Wellspring: Idle River">
+  <meta property="og:description" content="Every river starts as a trickle. Grow yours into a delta that reaches the sea.">
+  <meta property="og:image" content="https://bchandlerrr.github.io/wellspring/img/1-valley.jpg">
+  <link rel="icon" href="img/icon.png">
+  <link rel="apple-touch-icon" href="img/icon.png">
+  <style>
+    :root {
+      --bg: #0c171b; --surface: #13232a; --raised: #1b3039; --line: #1f343c;
+      --ink: #eef5f2; --muted: #8da6a9; --accent: #5ad8ec; --notoriety: #e0ae68; --go: #6bd68f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: ui-rounded, -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Segoe UI", system-ui, sans-serif;
+      line-height: 1.55; -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 56px 16px 72px; }
+    a { color: var(--accent); }
+    .hero { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; text-align: center; }
+    .icon { width: 112px; height: 112px; border-radius: 26px; margin: 0 auto; box-shadow: 0 12px 40px rgba(90, 216, 236, 0.22); }
+    h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.05; margin: 8px 0 6px; letter-spacing: -0.02em; font-weight: 900; }
+    .kicker { color: var(--accent); font-weight: 800; letter-spacing: 0.18em; font-size: 0.8rem; text-transform: uppercase; }
+    .lede { color: var(--muted); font-size: 1.15rem; max-width: 560px; margin: 0 auto; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+      background: var(--accent); color: #05262e; font-weight: 900; padding: 12px 22px; border-radius: 14px;
+      text-decoration: none; box-shadow: 0 4px 0 #239dbb;
+    }
+    .badge.soon { background: var(--raised); color: var(--muted); box-shadow: none; }
+    .shots { display: flex; gap: 16px; justify-content: center; margin: 44px 0 8px; overflow-x: auto; padding-bottom: 8px; }
+    .shots img { width: min(240px, 70vw); border-radius: 22px; flex: none; box-shadow: 0 18px 50px rgba(0,0,0,0.5); }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 40px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .card .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+    footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; text-align: center; }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <img class="icon" src="img/icon.png" alt="Wellspring app icon">
+      <div>
+        <div class="kicker">Idle game for iPhone &amp; iPad</div>
+        <h1>Wellspring: Idle River</h1>
+        <p class="lede">Every river starts as a trickle. Tap the spring, dig channels that branch toward the sea, and watch the valley come alive with mills, boats and villages as your river grows.</p>
+        <span class="badge soon">Coming soon to the App Store</span>
+      </div>
+    </section>
+
+    <div class="shots">
+      <img src="img/1-valley.jpg" alt="A river valley with villages, mills and boats">
+      <img src="img/3-works.jpg" alt="Choosing where to place a work on the river">
+      <img src="img/4-rain.jpg" alt="An autumn river during a Rain Dance">
+    </div>
+
+    <section class="features">
+      <div class="card"><h3><span class="dot" style="background:var(--accent)"></span>A river, not a list</h3><p>Dig Trickles, Creeks, Mill Races, Canals and Delta Distributaries. Every channel branches off the spring or another channel, and your river takes shape on the map.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--go)"></span>Where you build matters</h3><p>Dams, weirs, locks and aqueducts multiply everything downstream. Near the spring they lift the whole river; at a tip, one stream.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--notoriety)"></span>Reach the sea</h3><p>Let your river reach the sea for Silt, and spend it on perks that make every river after grow faster.</p></div>
+      <div class="card"><h3><span class="dot" style="background:#f3d9ff"></span>A valley that comes alive</h3><p>Watermills, wheat fields, barges and castles appear as you grow. Nine biomes, from cherry blossom to a river of lava.</p></div>
+    </section>
+
+    <footer>
+      <a href="support.html">Support</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot;
+      <a href="https://bchandlerrr.github.io/">Braxton Chandler</a> &middot;
+      <a href="mailto:brax6@icloud.com">brax6@icloud.com</a>
+    </footer>
+  </main>
+</body>
+</html>
