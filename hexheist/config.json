@@ -1,0 +1,11 @@
+{
+  "adVaultsBetween": 3,
+  "adCooldownSeconds": 180,
+  "rewardedKeys": 1,
+  "dailyEscapeKeys": 1,
+  "hintsEnabled": true,
+  "rewindEnabled": true,
+  "archiveUpsellEnabled": true,
+  "announcement": "",
+  "dailySeedOverrides": {}
+}
