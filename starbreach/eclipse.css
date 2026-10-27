@@ -23,7 +23,7 @@ a { color: var(--amber); text-decoration: none; border-bottom: 1px solid var(--r
 a:hover { border-bottom-color: var(--amber); }
 .kicker {
   display: flex; align-items: center; gap: 14px; color: var(--amber);
-  font-size: 12px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 18px;
+  font-size: 12px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 18px; white-space: nowrap;
 }
 .kicker::before, .kicker::after { content: ""; height: 2px; width: 44px; background: var(--amber); }
 nav { display: flex; gap: 22px; align-items: center; margin-bottom: 48px; flex-wrap: wrap; }
@@ -39,6 +39,9 @@ nav a { font-size: 14px; }
 .panel p { margin: 6px 0; }
 footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid rgba(245, 235, 217, 0.08); font-size: 13px; color: #7d7064; }
 @media (max-width: 560px) {
+  nav { gap: 16px; margin-bottom: 36px; }
+  nav .wordmark { font-size: 16px; letter-spacing: 3px; gap: 10px; }
+  nav .wordmark img { width: 30px; height: 30px; }
   .hero { grid-template-columns: 1fr; }
   .hero img { width: 96px; height: 96px; border-radius: 22px; }
   .shots { grid-template-columns: 1fr 1fr; }
