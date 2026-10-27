@@ -1,0 +1,24 @@
+/* Glassfall site: night-blue nave, jewel glass, gold leaf. */
+:root { --night: #0b0e24; --dusk: #131738; --lead: #13121a; --parchment: #f2ebdc; --muted: #b7b3c9; --gold: #ffc94d; --sapphire: #336bfa; }
+* { box-sizing: border-box; }
+html { background: var(--night); }
+body { margin: 0; color: var(--parchment); font: 17px/1.7 "Avenir Next", Avenir, "Segoe UI", sans-serif; min-height: 100vh;
+  background: radial-gradient(48rem 34rem at 50% -8%, rgba(51, 107, 250, 0.28), transparent 70%),
+              radial-gradient(30rem 24rem at 100% 100%, rgba(224, 38, 69, 0.16), transparent 70%), var(--night); }
+main { max-width: 700px; margin: 0 auto; padding: 48px 20px 80px; }
+h1, h2 { font-family: Didot, "Bodoni 72", "Playfair Display", Georgia, serif; font-weight: 700; letter-spacing: 1px; }
+h1 { font-size: clamp(32px, 7vw, 50px); margin: 6px 0 10px; color: var(--gold); }
+h2 { font-size: 23px; margin: 36px 0 6px; }
+p, li { color: var(--muted); }
+strong { color: var(--parchment); }
+a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(255, 201, 77, 0.4); }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+header .brand { display: flex; align-items: center; gap: 10px; margin-right: auto; border: 0; color: var(--parchment);
+  font-family: Didot, Georgia, serif; font-size: 20px; letter-spacing: 4px; }
+header .brand img { width: 34px; height: 34px; border-radius: 8px; }
+header a { font-size: 14px; }
+.eyebrow { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; }
+.pane { margin: 22px 0; padding: 18px 22px; border-radius: 10px; background: rgba(19, 23, 56, 0.9);
+  border: 3px solid var(--lead); box-shadow: inset 0 0 0 1px rgba(255, 201, 77, 0.25); }
+.pane p { margin: 6px 0; }
+footer { margin-top: 56px; font-size: 13px; color: #7c7894; }
