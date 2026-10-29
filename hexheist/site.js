@@ -1,9 +1,9 @@
-// The ONE place the support email lives. Every page fills its
-// [data-email] links from here.
-const SUPPORT_EMAIL = "brax6@icloud.com";
-
-document.querySelectorAll("[data-email]").forEach((el) => {
-  const subject = el.getAttribute("data-subject");
-  el.href = "mailto:" + SUPPORT_EMAIL + (subject ? "?subject=" + encodeURIComponent(subject) : "");
-  if (!el.textContent.trim()) el.textContent = SUPPORT_EMAIL;
-});
+// Hex Heist pages share one contact address; links marked data-email pick it up here.
+(() => {
+  const inbox = ["brax6", "icloud.com"].join("@");
+  for (const link of document.querySelectorAll("a[data-email]")) {
+    const topic = link.dataset.subject;
+    link.href = `mailto:${inbox}${topic ? `?subject=${encodeURIComponent(topic)}` : ""}`;
+    if (link.textContent.trim() === "") link.textContent = inbox;
+  }
+})();

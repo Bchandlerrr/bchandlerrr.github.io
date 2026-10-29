@@ -1,22 +1,25 @@
-:root { --ink:#22141A; --room:#2B1A15; --stripe:#33201A; --panel:#3D2820; --cream:#FFF3DA; --dim:#D9C7A8; --yellow:#FFC83D; --red:#FF5B4A; --teal:#2BC4B4; }
+/* Hex Heist pages: the vault at night. Navy floor, a faint hex grid,
+   gem-cyan for anything you can follow, flashlight gold for warnings. */
+:root { --floor:#080B1A; --floor-up:#141A3A; --tile:#121733; --edge:#2C3878; --gem:#3EF2FF;
+        --flash:#FFE58A; --thief:#B07CFF; --text:#EAF0FF; --faint:#8A93B8; }
 * { box-sizing: border-box; }
-body { margin:0; color:var(--cream); font:17px/1.55 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif;
-  background: repeating-linear-gradient(90deg, var(--room) 0 84px, var(--stripe) 84px 140px); }
-.sheet { max-width: 920px; margin: 0 auto; padding: 32px 16px 48px; }
-h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height:1.05; margin:.3rem 0 1rem; font-weight:900; text-shadow: 0 4px 0 var(--ink); }
-h2 { font-weight:900; margin-top:2.2rem; color:var(--yellow); text-shadow: 0 3px 0 var(--ink); }
-a { color: var(--yellow); }
-.eyebrow { color:var(--yellow); font-weight:900; letter-spacing:.14em; text-transform:uppercase; font-size:.85rem; }
-.muted { color: var(--dim); }
-.hero { display:grid; gap:24px; align-items:center; }
-.icon { width:120px; height:120px; border-radius:27px; border:4px solid var(--ink); box-shadow:0 6px 0 var(--ink); }
-.badge { display:inline-block; margin-top:.6rem; padding:.8rem 1.3rem; border-radius:16px; background:var(--yellow); color:var(--ink);
-  font-weight:900; text-decoration:none; border:4px solid var(--ink); box-shadow:0 6px 0 #C98A12, 0 6px 0 4px var(--ink); }
-.shots { display:flex; gap:14px; overflow-x:auto; padding:22px 2px 12px; }
-.shots img { height: 420px; border-radius: 18px; border:4px solid var(--ink); flex: none; }
-.features { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:14px; }
-.card { background:var(--panel); border:4px solid var(--ink); border-radius:20px; padding:16px 18px; box-shadow:0 5px 0 var(--ink); }
-.card strong { color: var(--yellow); }
-ul { padding-left: 1.2rem; }
-footer { margin-top: 3rem; color: var(--dim); font-size:.95rem; }
-@media (max-width: 600px) { .shots img { height: 340px; } }
+html { background: var(--floor); }
+body { margin: 0; color: var(--text); font: 17px/1.6 -apple-system, "SF Pro Text", system-ui, sans-serif;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33' fill='none' stroke='%232C3878' stroke-opacity='.35'/%3E%3C/svg%3E"),
+    linear-gradient(var(--floor-up), var(--floor) 520px); }
+.vault { max-width: 760px; margin: 0 auto; padding: 40px 20px 56px; }
+.tag { display: inline-block; font: 700 .78rem/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gem); border: 1px solid var(--gem); border-radius: 6px; padding: .45em .7em; }
+h1 { font: 900 clamp(2rem, 6vw, 3rem)/1.08 ui-rounded, "SF Pro Rounded", system-ui, sans-serif; margin: .9rem 0 1rem;
+  background: linear-gradient(90deg, var(--text), var(--thief)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2 { font: 800 1.15rem/1.3 ui-monospace, "SF Mono", Menlo, monospace; color: var(--flash); margin: 2.4rem 0 .6rem;
+  padding-bottom: .4rem; border-bottom: 1px dashed var(--edge); }
+a { color: var(--gem); text-underline-offset: 3px; }
+strong { color: #fff; }
+.faint { color: var(--faint); }
+.file { background: var(--tile); border: 1px solid var(--edge); border-left: 4px solid var(--gem);
+  border-radius: 10px; padding: 16px 18px; }
+ul { padding-left: 1.1rem; }
+li { margin: .45rem 0; }
+footer { margin-top: 3.2rem; padding-top: 1rem; border-top: 1px solid var(--edge); color: var(--faint); font-size: .92rem; }
