@@ -1,9 +1,10 @@
-// The ONE place the support email lives. Every page fills its
-// [data-email] links from here.
-const SUPPORT_EMAIL = "brax6@icloud.com";
-
-document.querySelectorAll("[data-email]").forEach((el) => {
-  const subject = el.getAttribute("data-subject");
-  el.href = "mailto:" + SUPPORT_EMAIL + (subject ? "?subject=" + encodeURIComponent(subject) : "");
-  if (!el.textContent.trim()) el.textContent = SUPPORT_EMAIL;
+// Through the Gap pages: wire every "email us" link to the one support inbox.
+document.addEventListener("DOMContentLoaded", () => {
+  const user = "brax6", host = "icloud.com";
+  document.querySelectorAll("[data-email]").forEach((link) => {
+    const address = `${user}@${host}`;
+    const subject = link.getAttribute("data-subject");
+    link.setAttribute("href", "mailto:" + address + (subject ? "?subject=" + encodeURIComponent(subject) : ""));
+    if (!link.textContent.trim()) link.textContent = address;
+  });
 });
