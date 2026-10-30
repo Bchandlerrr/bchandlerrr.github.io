@@ -1,0 +1,82 @@
+/* SpaceMiner's pages read like the rig's own console: near-black hull plating, a cyan
+   readout line, monospaced labels, and panels lit from the edge rather than shadowed. */
+:root {
+  --void: #07080f;
+  --plate: #10131f;
+  --plate-edge: #22324a;
+  --readout: #3ee6ff;
+  --shard: #a77bff;
+  --credit: #4ade80;
+  --text: #e7ecf5;
+  --muted: #8d97ab;
+}
+:root[data-theme="light"] {
+  --void: #eef2f8; --plate: #ffffff; --plate-edge: #c9d6e8; --readout: #0b7f99;
+  --shard: #6a3fd1; --credit: #17803d; --text: #121826; --muted: #566074;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--void); }
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(167, 123, 255, 0.16), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(62, 230, 255, 0.10), transparent 60%),
+    var(--void);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--readout); text-underline-offset: 3px; }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; }
+
+.hull { max-width: 960px; margin: 0 auto; padding: 44px 16px 64px; }
+.hull.slim { max-width: 700px; }
+
+.tag {
+  font: 600 12px/1 ui-monospace, "SF Mono", Menlo, monospace;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--readout);
+}
+.tag::before { content: "// "; opacity: 0.6; }
+
+.panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent 40%), var(--plate);
+  border: 1px solid var(--plate-edge);
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: inset 0 1px 0 rgba(62, 230, 255, 0.12);
+}
+
+.intro { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+.intro img { width: 104px; height: 104px; border-radius: 23px; box-shadow: 0 0 0 1px var(--plate-edge), 0 0 34px rgba(62, 230, 255, 0.22); }
+.intro h1 { font-size: clamp(2.1rem, 6vw, 3.1rem); margin: 6px 0 4px; }
+.intro > div { flex: 1 1 260px; min-width: 0; }
+.intro p { margin: 0; color: var(--muted); max-width: 34em; }
+.pending {
+  display: inline-block; margin-top: 14px; padding: 7px 14px; border-radius: 999px;
+  border: 1px solid var(--plate-edge); color: var(--muted);
+  font: 600 13px/1.2 ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+.bay { display: flex; gap: 16px; overflow-x: auto; padding: 30px 2px 10px; scroll-snap-type: x mandatory; }
+.bay img {
+  flex: none; width: min(230px, 66vw); border-radius: 22px; scroll-snap-align: start;
+  border: 1px solid var(--plate-edge);
+}
+
+.systems { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 28px; }
+.systems h3 { margin: 6px 0 6px; font-size: 1.05rem; }
+.systems p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+.doc h1 { font-size: 2.1rem; margin: 8px 0 4px; }
+.doc h2 { font-size: 1.2rem; margin: 2.2rem 0 0.4rem; }
+.doc h3 { font-size: 1rem; margin: 1.5rem 0 0.25rem; }
+.doc .panel { margin: 20px 0; }
+.doc ul { padding-left: 1.2rem; }
+.muted { color: var(--muted); }
+
+footer {
+  margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--plate-edge);
+  color: var(--muted); font-size: 0.9rem;
+}
+footer a { color: var(--muted); }
