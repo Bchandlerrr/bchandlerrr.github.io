@@ -1,0 +1,75 @@
+/* River Draw's pages are cut from the same card as the game: cream stock,
+   sage and river-blue sheets, soft shadows instead of borders, serif type. */
+:root {
+  --stock: #efe6cf;
+  --sheet: #fbf6ea;
+  --sheet-deep: #ede4cf;
+  --umber: #3b2c20;
+  --faded: #7b6f60;
+  --river: #33698c;
+  --river-pale: #9dc4d6;
+  --moss: #6e9f58;
+  --sun: #e6b24c;
+  --cast: 0 1px 1px rgba(43, 33, 24, 0.12), 0 6px 14px rgba(43, 33, 24, 0.14);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --stock: #1f2a24; --sheet: #2b362f; --sheet-deep: #26302a; --umber: #f1e9d6; --faded: #b5ab97;
+    --river: #9dc4d6; --river-pale: #4a87ac;
+    --cast: 0 1px 1px rgba(0, 0, 0, 0.3), 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+}
+:root[data-theme="dark"] {
+  --stock: #1f2a24; --sheet: #2b362f; --sheet-deep: #26302a; --umber: #f1e9d6; --faded: #b5ab97;
+  --river: #9dc4d6; --river-pale: #4a87ac;
+  --cast: 0 1px 1px rgba(0, 0, 0, 0.3), 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--stock); }
+body {
+  margin: 0;
+  background: var(--stock);
+  color: var(--umber);
+  font: 17px/1.6 "New York", "Iowan Old Style", Georgia, ui-serif, serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--river); text-underline-offset: 3px; }
+h1, h2, h3 { font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; }
+
+.page { max-width: 980px; margin: 0 auto; padding: 48px 16px 64px; }
+.page.narrow { max-width: 720px; }
+
+/* A sheet of card lifted off the page. */
+.sheet { background: var(--sheet); border-radius: 18px; box-shadow: var(--cast); padding: 20px 22px; }
+
+.top { text-align: center; }
+.top img.icon { width: 116px; height: 116px; border-radius: 27px; box-shadow: var(--cast); }
+.top h1 { font-size: clamp(2.3rem, 7vw, 3.6rem); margin: 18px 0 6px; }
+.tagline { font-style: italic; color: var(--faded); font-size: 1.15rem; max-width: 34em; margin: 0 auto; }
+.soon {
+  display: inline-block; margin-top: 22px; padding: 10px 20px; border-radius: 12px;
+  background: var(--sheet-deep); color: var(--faded); box-shadow: var(--cast); font-weight: 700;
+}
+
+.strip { display: flex; gap: 18px; overflow-x: auto; padding: 36px 4px 14px; justify-content: center; }
+.strip img { flex: none; width: min(236px, 68vw); border-radius: 22px; box-shadow: var(--cast); }
+
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 34px; }
+.notes .sheet h3 { margin: 0 0 6px; font-size: 1.08rem; }
+.notes .sheet p { margin: 0; color: var(--faded); font-size: 0.97rem; }
+.notes .sheet::before {
+  content: ""; display: block; width: 34px; height: 8px; border-radius: 4px; margin-bottom: 12px;
+  background: var(--tab, var(--river)); box-shadow: 0 2px 3px rgba(43, 33, 24, 0.18);
+}
+
+.kicker { font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faded); font-weight: 700; }
+.doc h1 { font-size: 2.2rem; margin: 6px 0 4px; }
+.doc h2 { font-size: 1.3rem; margin-top: 2.2rem; }
+.doc h3 { font-size: 1.05rem; margin: 1.6rem 0 0.3rem; }
+.doc .sheet { margin: 22px 0; }
+.doc ul { padding-left: 1.2rem; }
+.dim { color: var(--faded); }
+
+footer { margin-top: 52px; text-align: center; color: var(--faded); font-size: 0.9rem; }
+footer a { color: var(--faded); }
